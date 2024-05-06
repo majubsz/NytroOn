@@ -1,0 +1,931 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(./fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Josefin_Sans";
+    src: url(./fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf);
+}
+
+:root {
+    --roxo: #5a3d8b;
+    --amarelo: #E4D98D;
+    --rosa: #9F60A0;
+    --azul: #697FBB;
+    --offwhite: #E9EFF1;
+    --azulfundo: #0C0228;
+}
+
+
+
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container-grid {
+    width: 80vw;
+    max-width: 1400px;
+
+    /* margin: 20px - Espaçamento externo de 20px */
+    /* margin: 20px 10px - Espaçamento 20px na vertical, 10px na horizontal */
+    /* margin: 20px 10px 5px - Espaçamento 20px para cima, 10px na horizontal, 5px para baixo */
+    /* margin: 20px 10px 5px 2px - Espaçamento 20px para cima, 10px para a direita, 5px para baixo, 2px para a esquerda */
+
+    margin: 0 auto;
+}
+
+
+.banner {
+    height: 700px;
+
+    background-image: linear-gradient(103deg, rgba(49, 31, 79, 0.96) 0%, rgba(49, 23, 94, 0.52) 100%), url(./img/foguete.jpg);
+    background-size: cover;
+    background-position: right center;
+
+}
+
+header {
+    height: 165px;
+}
+
+header button {
+    width: 120px;
+    padding: 15%;
+    border-radius: 37px;
+    background-color: var(--roxo);
+    color: #E9EFF1;
+    border: transparent;
+
+    font-family: "Josefin_Sans";
+    font-size: 18px;
+
+    z-index: 1;
+
+    transition: 200ms;
+}
+
+header button:hover {
+    transform: scale(1.05);
+    transition: 200ms
+}
+
+header img {
+    width: 69px;
+}
+
+header .container-grid {
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    width: 700px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.menu a {
+    font-size: 18px;
+    font-family: 'Josefin_Sans';
+
+    color: white;
+    text-decoration: underline transparent;
+
+    transition: text-decoration 500ms ease;
+
+    z-index: 1;
+
+    transition: 200ms;
+}
+
+.menu a:hover {
+    transform: scale(1.15);
+    transition: 200ms
+}
+
+span {
+    color: #E4D98D;
+    font-weight: 400px;
+}
+
+.amarelo {
+    font-weight: 400px;
+    color: var(--amarelo);
+}
+
+.menu h1 {
+    font-family: "Josefin_Sans";
+    padding: 20px 35px;
+    font-size: 16px;
+    border: 37px;
+    border-radius: 37px;
+    background-color: #5A3D8B;
+    color: white;
+    cursor: pointer;
+}
+
+.menu a:hover {
+    text-decoration-color: var(--rosa);
+    color: var(--rosa);
+
+    text-decoration: underline;
+
+}
+
+.conteudo-banner {
+    height: calc(85vh - 280px);
+
+    display: flex;
+    align-items: center;
+}
+
+.conteudo-banner p {
+    color: var(--offwhite);
+
+    font-family: "Josefin_Sans";
+    font-size: 60px;
+    font-weight: 200;
+}
+
+
+
+
+section {
+    height: 700px;
+
+    background-position: bottom;
+    background-attachment: fixed;
+}
+
+#sobre {
+    text-align: center;
+    background-image: url("img/bolasfundo.png");
+    background-color: rgb(12, 2, 40);
+
+    color: white;
+    padding-top: 60px;
+    padding-bottom: 120px;
+    margin-bottom: 100px;
+
+}
+
+span {
+    font-weight: 400px;
+
+    font-family: "Josefin_Sans";
+    color: #5A3D8B;
+}
+
+.roxo {
+    font-weight: 400px;
+    color: var(--roxo);
+}
+
+
+#sobre h2 {
+    padding: 2%;
+
+    font-family: "Josefin_Sans";
+}
+
+.container-cardsobre {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-cardsobre .container-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-cardsobre .container-grid .card:nth-child(even) {
+    margin-top: 100px;
+}
+
+.card {
+    height: 320px;
+    width: 280px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+
+    background-color: #5a3d8b47;
+
+    border-radius: 10%;
+
+    position: relative;
+}
+
+.card svg {
+    height: 50px;
+    width: 50px;
+}
+
+.fundoicone {
+    height: 100px;
+    width: 100px;
+
+    border-radius: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: -50px;
+
+    background-color: #45267b;
+}
+
+.agoravai {
+    margin-top: 50px;
+}
+
+.card p {
+    height: 80%;
+    width: 80%;
+
+    color: var(--offwhite);
+
+    font-family: "Josefin_Sans";
+    font-size: 16px;
+
+    margin: auto;
+
+}
+
+.card h2 {
+    margin-bottom: 40px;
+}
+
+
+
+#cases {
+    background-image: url(img/fundo-cases.png);
+    background: rgb(21, 8, 60);
+    background: linear-gradient(0deg, rgba(21, 8, 60, 1) 0%, rgba(28, 19, 55, 1) 100%);
+
+    text-align: center;
+
+    padding-top: 100px;
+    margin-bottom: 100px;
+    margin-top: -100px;
+}
+
+#cases h2 {
+    margin-bottom: 70px;
+
+    font-family: "Josefin_Sans";
+    color: var(--offwhite);
+}
+
+span {
+    font-family: "Josefin_Sans";
+    color: #9F60A0;
+}
+
+.rosa {
+    color: var(--rosa);
+}
+
+.container-cartao {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cartao {
+    height: 440px;
+    width: 360px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+
+    background: rgb(154, 104, 237);
+    background: linear-gradient(90deg, rgba(154, 104, 237, 0.15) 0%, rgba(93, 36, 191, 0.15) 100%);
+
+    border-radius: 20px;
+
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+
+    z-index: 1;
+
+    transition: 200ms;
+}
+
+.cartao:hover {
+    transform: scale(1.10);
+    transition: 200ms
+}
+
+.cartao img {
+    height: 30%;
+    width: 30%;
+
+    border-radius: 4px 4px 0px 0px;
+}
+
+.cartao p {
+    color: white;
+
+    font-family: "Montserrat";
+    font-size: 16px;
+
+    text-align: center;
+
+    padding: 7%;
+}
+
+.cartao h3 {
+    font-family: "Montserrat";
+    font-size: 16px;
+
+    color: #8e76b7;
+}
+
+.cartao button {
+    width: 200px;
+    height: 50px;
+
+    background-color: transparent;
+
+    border: none;
+    border-radius: 37px;
+
+    color: white;
+
+    font-family: "Montserrat";
+    font-size: 17px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background-color 500ms ease;
+}
+
+.cartao button:hover {
+    background-color: rgb(90, 61, 139);
+    background: linear-gradient(90deg, rgba(90, 61, 139, 1) 0%, rgba(161, 96, 162, 1) 100%);
+}
+
+.container-cartao {
+    display: flex;
+    justify-content: space-between;
+
+    z-index: 1;
+
+    transition: 200ms;
+}
+
+
+.container-cartao a:hover {
+    transform: scale(1.05);
+    transition: 200ms;
+}
+
+.cartao1 {
+    height: 460px;
+    width: 380px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+
+    border-color: #E4D98D;
+
+    border-radius: 20px;
+
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+
+    background: rgb(190, 171, 214);
+    background: linear-gradient(90deg, rgba(190, 171, 214, 0.25) 0%, rgba(97, 75, 150, 0.25) 100%);
+
+    z-index: 1;
+
+    transition: 200ms;
+}
+
+.cartao1:hover {
+    transform: scale(1.10);
+    transition: 200ms
+}
+
+.cartao1 img {
+    height: 30%;
+    width: 30%;
+
+    border-radius: 4px 4px 0px 0px;
+}
+
+.cartao1 p {
+    color: white;
+
+    font-family: "Montserrat";
+    font-size: 16px;
+
+    text-align: center;
+
+    padding: 7%;
+}
+
+.cartao1 h3 {
+    font-family: "Montserrat";
+    font-size: 16px;
+
+    color: #8e76b7
+}
+
+.cartao1 button {
+    width: 200px;
+    height: 50px;
+
+    border-radius: 37px;
+
+    background-color: transparent;
+
+    border: none;
+
+    color: white;
+
+    font-family: "Montserrat";
+    font-size: 17px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background-color 900ms ease;
+}
+
+.cartao1 button:hover {
+    background-color: rgb(90, 61, 139);
+    background: linear-gradient(90deg, rgba(90, 61, 139, 1) 0%, rgba(161, 96, 162, 1) 100%);
+}
+
+
+#parceiros {
+    height: unset;
+    background-attachment: fixed;
+
+    position: relative;
+
+    margin-top: -100px;
+
+}
+
+
+.container-parceiros {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-parceiros div {
+    width: 33.3%;
+}
+
+.cognitt {
+    background: url(img/educacao.jpg);
+    background-size: cover;
+    background-position: 0 -34px;
+    background-repeat: no-repeat;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 300px;
+
+    z-index: 1;
+
+    transition: 200ms;
+}
+
+.cognitt:hover {
+    transform: scale(1.05);
+    transition: 200ms
+}
+
+.cognitt .filtro {
+    background: linear-gradient(90deg, rgba(0, 53, 84, 0.6) 0%, rgba(0, 53, 84, 0.6) 100%);
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0px;
+}
+
+.cognitt img {
+    position: relative;
+    z-index: 1;
+}
+
+.ecosoy {
+    background: url(img/moda.jpg);
+    background-size: cover;
+    background-position: 0 -195px;
+    background-repeat: no-repeat;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 300px;
+
+    z-index: 1;
+
+    transition: 200ms; 
+}
+
+.ecosoy:hover {
+    transform: scale(1.05);
+    transition: 200ms
+}
+
+.ecosoy .filtro{
+    background: linear-gradient(90deg, rgba(165, 117, 71, 0.6) 0%, rgba(165, 117, 71, 0.6) 100%);
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0px;
+}
+
+.ecosoy img {
+    position: relative;
+    z-index: 1;
+}
+
+.biomove {
+    background: url(img/transporteecologico.jpg);
+    background-size: cover;
+    background-position: 0 -34px;
+    background-repeat: no-repeat;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 300px;
+
+    z-index: 1;
+
+    transition: 200ms;
+}
+
+.biomove:hover {
+    transform: scale(1.05);
+    transition: 200ms
+}
+
+.biomove .filtro {
+    background: linear-gradient(90deg, rgba(121, 206, 102, 0.6) 0%, rgba(121, 206, 102, 0.6) 100%);
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0px;
+}
+
+.biomove img {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+#contato {
+    text-align: center;
+
+    background-image: url("img/bolasfundo.png");
+   
+
+    color: white;
+    height: unset;
+    padding-top: 60px;
+    padding-bottom: 120px;
+    margin-bottom: 40px;
+}
+
+#contato h5 {
+    margin-bottom: 90px;
+
+    color: var(--offwhite);
+
+    font-family: "Josefin_Sans";
+    font-size: 25px;
+
+    margin: auto;
+}
+
+#contato form {
+    margin: 0 auto;
+    padding: 60px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: "Montserrat";
+    font-size: 17px;
+}
+
+.campo {
+    width: 60%;
+
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin-bottom: 50px;
+
+    align-items: center;
+}
+
+.campo-descricao {
+    width: 60%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+
+    text-align: left;
+    align-items: center;
+}
+
+.campo input {
+    height: 40px;
+
+    color: white;
+    background-color: #45267b;
+
+    border: none;
+    border-radius: 4px;
+
+    text-indent: 10px;
+
+    outline: none;
+}
+
+.campo-descricao textarea {
+    color: white;
+    background-color: #45267b;
+
+    border: none;
+    border-radius: 4px;
+
+    outline: none;
+
+    padding: 10px;
+
+    resize: none;
+}
+
+.campo label,
+.campo-descricao label {
+    margin-bottom: 15px;
+}
+
+.campo input,
+.campo-descricao textarea {
+    font-family: "Montserrat";
+    font-size: 14px;
+    width: 770px;
+   
+}
+
+.campo input::placeholder,
+.campo-descricao textarea::placeholder {
+    color: #a0a0a0;
+}
+
+.campo input:focus,
+.campo-descricao textarea:focus {
+    outline: 2px solid var(--laranja-gamifica);
+}
+
+#contato form button {
+    height: 40px;
+    width: 20%;
+
+    background-color: var(--laranja-gamifica);
+    color: white;
+
+    border: none;
+    border-radius: 4px;
+
+    font-size: 17px;
+    font-family: "Montserrat";
+    font-weight: 700;
+    /* Bold */
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: background-color 500ms;
+}
+
+#contato form button:hover {
+    background-color: #9F60A0;
+}
+
+
+section {
+    background-color: rgb(12, 2, 40);
+
+    height: 800px;
+
+    background-position: bottom;
+    background-attachment: fixed;
+}
+
+
+
+
+
+footer {
+    margin-top: -100px;
+    height: 200px;
+
+    background: rgb(90,61,139);
+    background: linear-gradient(90deg, rgba(90,61,139,1) 0%, rgba(24,16,37,1) 100%);
+}
+
+
+footer .container-grid {
+    height: 90%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.redes-sociais {
+    height: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.redes-sociais p {
+    color: #fff;
+
+    font-family: "Josefin_Sans";
+    font-size: 24px;
+}
+
+.icones-redes {
+    width: 240px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.icones-redes a {
+    color: white;
+}
+
+.icones-redes a:hover {
+    color: var(--amarelo);
+}
+
+/* OK - Scroll nos links */
+/* OK - Favicon */
+/* Animação do banner */
+
+@media screen and (max-width: 1300px) {
+    header {
+        position: relative;
+    }
+
+    header button {
+        width: 50px;
+
+        display: unset;
+
+        background: none;
+        border: none;
+    }
+
+    header svg {
+        fill: white;
+    }
+
+    nav.menu {
+        height: 500px;
+        width: 350px;
+
+        padding: 0px 30px;
+
+        flex-direction: column;
+        justify-content: space-around;
+
+        background-color: #000000da;
+
+        position: absolute;
+        top: 165px;
+        right: 0px;
+    }
+
+    #sobre {
+        padding: 100px 15%;
+    }
+
+    .card {
+        height: 320px;
+        width: 200px;
+    }
+
+    #contato form {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .container-cards {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        height: 400px;
+
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 40%;
+    }
+
+    footer {
+        height: unset;
+    }
+
+    footer .container-grid {
+        padding: 80px;
+        flex-direction: column;
+    }
+
+    footer img {
+        margin-bottom: 100px;
+    }
+
+    footer p {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .redes-sociais {
+        align-items: center;
+    }
+
+}
