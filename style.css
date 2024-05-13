@@ -845,10 +845,6 @@ footer .container-grid {
 /* Animação do banner */
 
 @media screen and (max-width: 1300px) {
-    header {
-        position: relative;
-    }
-
     header button {
         width: 50px;
 
@@ -856,10 +852,6 @@ footer .container-grid {
 
         background: none;
         border: none;
-    }
-
-    header svg {
-        fill: white;
     }
 
     nav.menu {
@@ -871,20 +863,73 @@ footer .container-grid {
         flex-direction: column;
         justify-content: space-around;
 
-        background-color: #000000da;
+        background-color: #0c0228a6;
 
         position: absolute;
         top: 165px;
         right: 0px;
     }
 
-    #sobre {
-        padding: 100px 15%;
+    .conteudo-banner p{
+        padding-top: 30%;
     }
 
+    .container-cardsobre {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #sobre {
+        margin-bottom: 10px;
+    }
+        
     .card {
-        height: 320px;
-        width: 200px;
+        height: 280px;
+        width: 240px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        padding-bottom: 10px;
+        margin-bottom: 40px;
+
+        background-color: #5a3d8b47;
+
+        border-radius: 10%;
+
+        position: relative;  
+    }
+
+    .cartao {
+        height: 400px;
+        width: 320px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .cartao1{
+        height: 420px;
+        width: 340px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .cartao p {
+        font-size: 14px;
+    }
+
+    .cartao1 p {
+        font-size: 15px;
     }
 
     #contato form {
@@ -893,7 +938,7 @@ footer .container-grid {
 }
 
 @media screen and (max-width: 1080px) {
-    .container-cards {
+    .container-cartao {
         flex-wrap: wrap;
     }
 
@@ -928,4 +973,144 @@ footer .container-grid {
         align-items: center;
     }
 
+}
+
+@media screen and (max-width: 800px) {
+    .card {
+        flex-basis: 45%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #sobre {
+        height: unset;
+        margin-bottom: 40px;
+    }
+
+    #sobre h2 {
+        margin-bottom: 50px;
+    }
+
+    #sobre p {
+        margin-bottom: 30px;
+    }
+
+    #cases,
+    #contato {
+        margin-bottom: unset;
+    }
+
+    #portfolio a{
+        width: 100%;
+        text-align: center;
+    }
+
+    .campo,
+    .campo-descricao,
+    #contato form button{
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 520px){
+    .container-grid{
+        width: 90%;
+    }
+
+    header img{
+        width: 200px;
+    }
+
+    .banner{
+        background-size: cover;
+    }
+
+    .conteudo-banner p{
+        font-size: 24px;
+    }
+
+    nav.menu{
+        width: 100%;
+
+        display: none;
+    }
+
+    #sobre{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    #sobre p{
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    #cases.container-grid{
+        width: 100%;
+        margin: unset;
+    }
+
+    .container-cards{
+        flex-wrap: nowrap;
+
+        gap: 40px;
+
+        overflow-x: auto;
+    }
+
+    .card{
+        height: 400px;
+        width: 280px;
+
+        flex-basis: unset;
+    }
+
+    .card:first-child{
+        margin-left: 30px;
+    }
+
+    .card:last-child{
+        margin-right: 30px;
+    }
+
+    #portfolio{
+        margin-bottom: 0;
+    }
+
+    #contato{
+        padding-top: 150px;
+
+        background-color: var(--roxo-gamifica);
+        color: white;
+    }
+
+    #contato h2{
+        margin-bottom: 0;
+    }
+
+    #contato form{
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+@media screen and (max-width: 400px){
+    header img{
+        width: 160px;
+    }
+
+    header svg{
+        width: 40px;
+    }
+
+    .conteudo-banner p{
+        font-size: 20px;
+    }
+
+    footer img{
+        width: 200px;
+    }
+
+    
 }
