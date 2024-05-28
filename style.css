@@ -99,8 +99,6 @@ header .container-grid {
     align-items: center;
 }
 
-
-
 .menu a {
     font-size: 18px;
     font-family: 'Josefin_Sans';
@@ -167,12 +165,7 @@ span {
 
 
 
-section {
-    height: 700px;
 
-    background-position: bottom;
-    background-attachment: fixed;
-}
 
 #sobre {
     text-align: center;
@@ -844,6 +837,12 @@ footer .container-grid {
 /* OK - Favicon */
 /* Animação do banner */
 
+
+
+
+
+
+
 @media screen and (max-width: 1300px) {
     header button {
         width: 50px;
@@ -932,23 +931,62 @@ footer .container-grid {
         font-size: 15px;
     }
 
+    .cognitt {
+        background-size: cover;
+        background-position: 0 0px;
+        background-repeat: no-repeat;
+    }
+
+    .ecosoy {
+        background-size: cover;
+        background-position: 0 -135px;
+        background-repeat: no-repeat;
+    }
+
+    .ecosoy img {
+        height: 45%;
+        width: 90%;
+    }
+
+    .biomove {
+        background-size: cover;
+        background-position: 0 0px;
+        background-repeat: no-repeat;
+    }
+
     #contato form {
         width: 75%;
     }
 }
 
 @media screen and (max-width: 1080px) {
-    .container-cartao {
+    .container-cardsobre{
         flex-wrap: wrap;
+        justify-content: space-between;
+        margin-left: -180px;
     }
 
     .card {
-        height: 400px;
-
-        flex-grow: 0;
         flex-shrink: 0;
-        flex-basis: 40%;
+    
+        height: 280px;
+        width: 240px;
+        margin-left: 20px;
+        
     }
+
+   .cartao1 {
+        margin-left: 20px;
+        margin-right: 20px;
+
+        width: 480px;
+        height: auto;
+   }
+
+   .cartao{
+        width: 390px;
+        height: auto;
+   }
 
     footer {
         height: unset;
@@ -978,6 +1016,88 @@ footer .container-grid {
 @media screen and (max-width: 800px) {
     .card {
         flex-basis: 45%;
+
+        flex-shrink: 0;
+    
+        height: 280px;
+        width: 240px;
+        margin-left: 20px;
+    }
+
+    .container-cardsobre .container-grid {
+        flex-wrap: wrap;
+    }
+
+    .container-cardsobre {
+        margin-left: 0px;
+    }
+
+    #sobre {
+        height: 980px;
+        margin-bottom: 100px;
+    }
+
+    #cases {
+        margin-bottom: 10px;
+    }
+
+    .cartao1 {
+        width: 430px;
+        height: auto;
+    }
+
+    .cartao1 h3 {
+        font-size: 12px;
+    }
+
+    .cartao1 p{
+        font-size: 13px;
+    }
+
+    .cartao{
+        width: 480px;
+        height: auto;
+    }
+
+    .cartao h3 {
+        font-size: 12px;
+    }
+
+    .cartao p{
+        font-size: 12px;
+    }
+
+    .container-cartao {
+        margin-left: -45px;
+    }
+
+    .cognitt {
+        background-position: -110px 0px;
+    }
+
+    .ecosoy {
+        background-position: 0 -74px;
+    }
+
+    .ecosoy img {
+        width: 68%;
+        height: 23%;
+    }
+
+    .biomove {
+        background-position: -83px 0px;
+    }
+
+    .biomove img {
+        width: 68%;
+    }
+
+    .cognitt img {
+        width: 50%;
+    }
+
+    .icones-redes {
+        margin-bottom: 60px;
     }
 }
 
@@ -988,16 +1108,52 @@ footer .container-grid {
     }
 
     #sobre h2 {
-        margin-bottom: 50px;
+        margin-bottom: 20px;
     }
 
-    #sobre p {
-        margin-bottom: 30px;
+    #cases {
+        margin-bottom: 10px;
     }
 
-    #cases,
-    #contato {
-        margin-bottom: unset;
+    .cartao1 {
+        width: 430px;
+        height: auto;
+    }
+
+    .cartao1 h3 {
+        margin-top: 10px;
+        font-size: 11px;
+    }
+
+    .cartao1 p{
+        font-size: 12px;
+    }
+
+    .cartao1 button{
+        width: 170px;
+        height: 30px;
+    } 
+
+    .cartao{
+        width: 480px;
+        height: auto;
+    }
+
+    .cartao h3 {
+        font-size: 10px;
+    }
+
+    .cartao p{
+        font-size: 11px;
+    }
+
+    .cartao button{
+        width: 170px;
+        height: 30px;
+    } 
+
+    .container-cartao {
+        margin-left: -60px;
     }
 
     #portfolio a{
