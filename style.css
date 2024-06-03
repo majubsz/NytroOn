@@ -58,9 +58,8 @@ header {
     height: 165px;
 }
 
-header button {
-    width: 120px;
-    padding: 15%;
+.botao {
+    padding: 3%;
     border-radius: 37px;
     background-color: var(--roxo);
     color: #E9EFF1;
@@ -161,8 +160,6 @@ span {
     font-size: 60px;
     font-weight: 200;
 }
-
-
 
 
 
@@ -775,10 +772,8 @@ span {
 section {
     background-color: rgb(12, 2, 40);
 
-    height: 800px;
-
     background-position: bottom;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
 }
 
 
@@ -837,14 +832,23 @@ footer .container-grid {
 /* OK - Favicon */
 /* Animação do banner */
 
+.menu-fechado {
+    display: none;
+}
 
+#icone-barras {
+    display: none;
+}
 
-
-
-
+.hamburguer {
+    width: 50px;
+    background: none;
+    border: transparent;
+    display: none;
+}
 
 @media screen and (max-width: 1300px) {
-    header button {
+    .botao {
         width: 50px;
 
         display: unset;
@@ -867,6 +871,13 @@ footer .container-grid {
         position: absolute;
         top: 165px;
         right: 0px;
+    }
+
+    .hamburguer {
+        width: 50px;
+        background: none;
+        border: transparent;
+        display: unset;
     }
 
     .conteudo-banner p{
@@ -1025,7 +1036,8 @@ footer .container-grid {
     }
 
     .container-cardsobre .container-grid {
-        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 70px;
     }
 
     .container-cardsobre {
@@ -1153,12 +1165,36 @@ footer .container-grid {
     } 
 
     .container-cartao {
-        margin-left: -60px;
+        margin-right: 60px;
     }
 
-    #portfolio a{
-        width: 100%;
-        text-align: center;
+    .cognitt {
+        background-position: -184px 0px;
+    }
+
+    .ecosoy {
+        background-position: 0 -40px;
+    }
+
+    .ecosoy img {
+        width: 68%;
+        height: 23%;
+    }
+
+    .biomove {
+        background-position: -110px 0px;
+    }
+
+    .biomove img {
+        width: 68%;
+    }
+
+    .cognitt img {
+        width: 50%;
+    }
+
+    .campo input, .campo-descricao textarea {
+        width: 560px;
     }
 
     .campo,
@@ -1174,15 +1210,17 @@ footer .container-grid {
     }
 
     header img{
-        width: 200px;
+        width: 60px;
     }
 
     .banner{
         background-size: cover;
+        background-position: 64%;
     }
 
     .conteudo-banner p{
-        font-size: 24px;
+        font-size: 40px;
+        margin-bottom: 100px;
     }
 
     nav.menu{
@@ -1196,6 +1234,10 @@ footer .container-grid {
         padding-left: 0px;
     }
 
+    #sobre h2 {
+        font-size: 20px;
+    }
+
     #sobre p{
         width: 90%;
         margin: 0 auto;
@@ -1207,37 +1249,72 @@ footer .container-grid {
         margin: unset;
     }
 
-    .container-cards{
+    .container-cardsobre{
         flex-wrap: nowrap;
 
         gap: 40px;
 
-        overflow-x: auto;
+        margin-top: 75px;
+    }
+
+    .container-cardsobre .container-grid .card:nth-child(even) {
+        margin-top: 0px;
+    }
+
+    .container-cartao{
+        flex-direction: column;
+        gap: 70px;
+        margin-left: 100px;
+        margin-bottom: 100px;
     }
 
     .card{
-        height: 400px;
+        height: 300px;
         width: 280px;
 
         flex-basis: unset;
     }
 
-    .card:first-child{
-        margin-left: 30px;
+    .cartao1 {
+        width: 270px;
+        height: 310px;
     }
 
-    .card:last-child{
-        margin-right: 30px;
+    .cartao1 h3 {
+        margin-top: 10px;
+        font-size: 11px;
     }
 
-    #portfolio{
-        margin-bottom: 0;
+    .cartao1 p{
+        font-size: 12px;
     }
+
+    .cartao1 button{
+        width: 170px;
+        height: 30px;
+    } 
+
+    .cartao{
+        width: 270px;
+        height: 310px;
+    }
+
+    .cartao h3 {
+        font-size: 10px;
+    }
+
+    .cartao p{
+        font-size: 11px;
+    }
+
+    .cartao button{
+        width: 170px;
+        height: 30px;
+    } 
+    
 
     #contato{
         padding-top: 150px;
-
-        background-color: var(--roxo-gamifica);
         color: white;
     }
 
@@ -1248,6 +1325,10 @@ footer .container-grid {
     #contato form{
         width: 100%;
         border-radius: 0;
+    }
+
+    .campo input, .campo-descricao textarea {
+        width: 500px;
     }
 }
 
